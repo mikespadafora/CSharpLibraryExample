@@ -1,0 +1,154 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{424BBBDA-4613-4348-AF58-60E9E8880BF0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BoseExSeriesLib</RootNamespace>
+    <AssemblyName>BoseExSeriesLib</AssemblyName>
+    <ProjectTypeGuids>{0B4745B0-194B-4BB6-8E21-E9057CA92500};{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>SmartDeviceProject1</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <AllowedReferenceRelatedFileExtensions>.allowedReferenceRelatedFileExtensions</AllowedReferenceRelatedFileExtensions>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FileAlignment>512</FileAlignment>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <AllowedReferenceRelatedFileExtensions>.allowedReferenceRelatedFileExtensions</AllowedReferenceRelatedFileExtensions>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FileAlignment>512</FileAlignment>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CCI.SimplSharp.Library.Comm, Version=1.0.0.15398, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\CCI.SimplSharp.Library.Comm.dll</HintPath>
+    </Reference>
+    <Reference Include="CCI.SimplSharp.Library.Components, Version=1.1.0.23110, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\CCI.SimplSharp.Library.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="CCI.SimplSharp.Library.IO, Version=1.0.0.15397, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\CCI.SimplSharp.Library.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="SimplSharpCustomAttributesInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\ProgramData\Crestron\SDK\SimplSharpCustomAttributesInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="SimplSharpHelperInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\ProgramData\Crestron\SDK\SimplSharpHelperInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="SimplSharpReflectionInterface, Version=1.0.5583.25238, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\ProgramData\Crestron\SDK\SimplSharpReflectionInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandProcessor.cs" />
+    <Compile Include="ComponentStates\CrosspointComponentState.cs" />
+    <Compile Include="Components\ADialerComponent.cs" />
+    <Compile Include="Components\GenericComponent.cs" />
+    <Compile Include="Components\GroupLevelMuteComponent.cs" />
+    <Compile Include="Components\ParameterSetComponent.cs" />
+    <Compile Include="Components\RouterComponent.cs" />
+    <Compile Include="Components\SourceSelectorComponent.cs" />
+    <Compile Include="Components\StateComponent.cs" />
+    <Compile Include="Components\LevelComponent.cs" />
+    <Compile Include="Components\StdCrosspointComponent.cs" />
+    <Compile Include="Components\VoipDialerComponent.cs" />
+    <Compile Include="Components\PSTNDialerComponent.cs" />
+    <Compile Include="Enums\CallActions.cs" />
+    <Compile Include="Enums\CallStatusMap.cs" />
+    <Compile Include="Enums\GroupStateValues.cs" />
+    <Compile Include="Enums\SignalTypes.cs" />
+    <Compile Include="Enums\VoipAccountStatusMap.cs" />
+    <Compile Include="Enums\ErrorResponses.cs" />
+    <Compile Include="Enums\LevelAttributes.cs" />
+    <Compile Include="Enums\RampTypes.cs" />
+    <Compile Include="Enums\RequestTypes.cs" />
+    <Compile Include="Enums\ResponseTypes.cs" />
+    <Compile Include="Enums\StateAttributes.cs" />
+    <Compile Include="Enums\StateValues.cs" />
+    <Compile Include="EventArguments\CommunicatingEventArgs.cs" />
+    <Compile Include="EventArguments\SerialEventArgs.cs" />
+    <Compile Include="EventArguments\CrosspointRoutedEventArgs.cs" />
+    <Compile Include="EventArguments\LastParameterSetEventArgs.cs" />
+    <Compile Include="EventArguments\HookStatusEventArgs.cs" />
+    <Compile Include="EventArguments\ComponentQuarantinedEventArgs.cs" />
+    <Compile Include="EventArguments\AutoAnswerEventArgs.cs" />
+    <Compile Include="EventArguments\CallStatusEventArgs.cs" />
+    <Compile Include="EventArguments\CallActiveEventArgs.cs" />
+    <Compile Include="EventArguments\CallerIdEventArgs.cs" />
+    <Compile Include="EventArguments\InputRoutedEventArgs.cs" />
+    <Compile Include="EventArguments\VoipAccountStatusEventArgs.cs" />
+    <Compile Include="EventArguments\KeypadTextEventArgs.cs" />
+    <Compile Include="EventArguments\SourceSelectionEventArgs.cs" />
+    <Compile Include="EventArguments\StateEventArgs.cs" />
+    <Compile Include="EventArguments\VolumePercentageEventArgs.cs" />
+    <Compile Include="EventArguments\VolumeLevelEventArgs.cs" />
+    <Compile Include="EventArguments\RS232TransmitEventArgs.cs" />
+    <Compile Include="EventArguments\QuarantinedComponentCountEventArgs.cs" />
+    <Compile Include="EventArguments\RegisteredComponentCountEventArgs.cs" />
+    <Compile Include="EventArguments\DebugEventArgs.cs" />
+    <Compile Include="EventArguments\InitializationEventArgs.cs" />
+    <Compile Include="Interfaces\IBoseModule.cs" />
+    <Compile Include="Interfaces\IQuarantine.cs" />
+    <Compile Include="Interfaces\IRefresh.cs" />
+    <Compile Include="Interfaces\IRS232Listener.cs" />
+    <Compile Include="Interfaces\IRS232Transport.cs" />
+    <Compile Include="Interfaces\ITCPTransport.cs" />
+    <Compile Include="Interfaces\ITCPTransportListener.cs" />
+    <Compile Include="Interfaces\ITransport.cs" />
+    <Compile Include="Interfaces\ITransportListener.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtocolSupport\StateAttributeFactory.cs" />
+    <Compile Include="ProtocolSupport\LevelAttributeFactory.cs" />
+    <Compile Include="ProtocolSupport\Models\BoseModuleModel.cs" />
+    <Compile Include="ProtocolSupport\Models\ModuleStateModels.cs" />
+    <Compile Include="ProtocolSupport\Models\ModuleVolumeModels.cs" />
+    <Compile Include="ProtocolSupport\MessageBundle.cs" />
+    <Compile Include="ProtocolSupport\Models\ModuleSubscriptionResponseModel.cs" />
+    <Compile Include="ProtocolSupport\ProtocolUtil.cs" />
+    <Compile Include="ProtocolSupport\ParserUtil.cs" />
+    <Compile Include="ProtocolSupport\ScaleUtil.cs" />
+    <Compile Include="Transports\RS232TransportComm.cs" />
+    <Compile Include="Transports\TCPTransportComm.cs" />
+    <None Include="Properties\ControlSystem.cfg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rem  S# preparation will execute after these operations</PostBuildEvent>
+  </PropertyGroup>
+</Project>
